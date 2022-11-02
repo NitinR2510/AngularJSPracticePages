@@ -1,1 +1,22 @@
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Ice_cream_with_whipped_cream%2C_chocolate_syrup%2C_and_a_wafer_%28cropped%29.jpg/1200px-Ice_cream_with_whipped_cream%2C_chocolate_syrup%2C_and_a_wafer_%28cropped%29.jpg" style="height: 100vh;">
+
+<div ng-controller="iceCtrl">
+    <section>
+
+    </section>
+    <hr>
+    <input type="checkbox" ng-model="seePage"> Wanna Check Page Details?
+    <br>
+    <section ng-show="seePage">
+        <strong> You are on the page: </strong>{{currentWebAddress}}
+        <br>
+        <strong>The protocol under use is: </strong> {{currentWebProtocol}}
+        <br>
+        <strong>The Host of the this web page is: </strong> {{currentWebHost}}
+        <br>
+        <strong>And it is running this file on the </strong> {{currentWebPortNumber}} <strong> port</strong>
+        <hr>
+
+        <em>This section takes together ng-show, and the $location service</em>
+    </section>
+
+</div>

@@ -1,0 +1,32 @@
+body, h3{
+    padding: 0.4rem;
+}
+a:link, a:visited{
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    background-color: beige; 
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+}
+#date_para{
+    padding: 0.2rem;
+    margin: 0.2rem;
+    border: 0.4rem double black;
+    color: rgb(2, 39, 14);
+}
+#books_header{
+    margin-top: 1rem;
+}
+.col-sm-4{
+    background-color: #659bdb;
+    padding: 0.7rem; 
+    margin-top: 0.4rem;
+}
+#friends_check{
+    text-align: justify;
+}
+section{
+    padding: 0.5rem;
+}

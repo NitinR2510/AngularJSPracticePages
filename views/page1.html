@@ -1,14 +1,40 @@
-<table style="border: 0.2rem black solid; padding: 0.5rem;">
-    <tr>
+<div ng-controller="bookCtrl">
+    <p id="books_header">Books I am reading at the Moment...</p>
+
+    <hr>
+    <section id="friends_check">
+        <input type="checkbox" ng-model="friend"> <em>Are you a friend?</em>
+    </section>
+
+    <table class="table">
         <thead>
-            <th>Name</th>
-            <th>Age</th>
-            <th>City</th>
+            <th>Book</th>
+            <th>Author</th>
+            <th ng-show="friend">Completion</th>
+            <th ng-hide="friend">N/A</th>
         </thead>
-    </tr>
-    <tr>
-        <td>Ntin</td>
-        <td>22</td>
-        <td>Nagpur</td>
-    </tr>
-</table>
+        <tbody>
+            <tr>
+                <td>
+                    <input type="text" placeholder="search by book name" ng-model="book">
+                </td>
+                <td>
+                    <input type="text" placeholder="search by author" ng-model="author">
+                </td>
+                <td ng-show="friend">
+                    <input  type="text" placeholder="search by completion" ng-model="completion">
+                </td>
+                <td ng-hide="friend">
+                    N/A
+                </td>
+                
+            </tr>
+            <tr ng-repeat="book in books | filter: {'book':book, 'author': author, 'completion': completion } ">
+                <td> {{book.book}} </td>
+                <td> {{book.author}} </td>
+                <td ng-show="friend"> {{book.completion}} </td>
+                <td ng-hide="friend">N/A</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
